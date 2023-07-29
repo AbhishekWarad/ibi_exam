@@ -1,0 +1,15 @@
+import asyncio
+
+async def async_task1():
+    await asyncio.sleep(1)
+    return 10
+
+async def async_task2(input_value):
+    return input_value * 2
+
+async def main():
+    result1 = await async_task1()
+    final_result = await async_task2(result1)
+    print(final_result) 
+
+asyncio.run(main())
