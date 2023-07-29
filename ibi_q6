@@ -1,0 +1,68 @@
+#named function
+import asyncio
+
+async def step_one():
+    await asyncio.sleep(1)
+    print("Step 1")
+
+async def step_two():
+    await asyncio.sleep(1)
+    print("Step 2")
+
+async def step_three():
+    await asyncio.sleep(1)
+    print("Step 3")
+
+async def main():
+    await step_one()
+    await step_two()
+    await step_three()
+
+# Run the event loop to execute the asynchronous tasks
+asyncio.run(main())
+
+
+#promises
+import asyncio
+
+async def step_one():
+    await asyncio.sleep(1)
+    print("Step 1")
+
+async def step_two():
+    await asyncio.sleep(1)
+    print("Step 2")
+
+async def step_three():
+    await asyncio.sleep(1)
+    print("Step 3")
+
+async def main():
+    await asyncio.gather(step_one(), step_two(), step_three())
+
+# Run the event loop to execute the asynchronous tasks
+asyncio.run(main())
+
+
+#async
+
+import asyncio
+
+async def delay(seconds):
+    await asyncio.sleep(seconds)
+
+async def main():
+    try:
+        await delay(1)
+        print("Step 1")
+
+        await delay(1)
+        print("Step 2")
+
+        await delay(1)
+        print("Step 3")
+    except Exception as e:
+        print("Error:", e)
+
+# Run the event loop to execute the asynchronous tasks
+asyncio.run(main())
